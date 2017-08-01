@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Train Scheduler</title>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    
+    <div class="jumbotron text-center">
+    <h1>Trains, Planes & Autos</h1>
+    <p>Well, just trains. Maybe trollies and monorails.</p>
+    </div>
+    
+    <div class="panel panel-danger">
+      <div class="panel-heading">Current Train Schedule</div>
+      <div class="panel-body">
+        <table class="table table-hover" id="trainTable">
+          <thead>
+            <tr>
+              <th>Train Name</th>
+              <th>Destination</th>
+              <th>Frquency (min)</th>
+              <th>Next Arrival</th>
+              <th>Minutes Away</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="train-0">
+         <!-- <td id="name-display">John Doe</td>
+              <td id="role-display">CEO</td>
+              <td id="startDate-display">07/01/2016</td>
+              <td id="monthsWorked-display">12</td>
+              <td id="monthlyRate-display">90</td> -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading">Add Train</div>
+      <div class="panel-body">
+        <form>
+          <div class="input-group">
+            <span class="input-group-addon">Train Name</span>
+            <input id="trainName" type="text" class="form-control" placeholder="Springfield Monorail">
+          </div>
+          <br />
+          <div class="input-group">  
+            <span class="input-group-addon">Destination</span>
+            <input id="trainDest" type="text" class="form-control" placeholder="Springfield">
+          </div>
+          <br />
+          <div class="input-group">  
+            <span class="input-group-addon">First Train Time (Military time)</span>
+            <input id="trainFTT" type="text" class="form-control" placeholder="13:20">
+          </div>
+          <br />
+          <div class="input-group">  
+            <span class="input-group-addon">Frequncy (minutes)</span>
+            <input id="trainFreq" type="text" class="form-control" placeholder="90">
+          </div>
+          <br />
+          <button type="submit" id="trainSubmit" class="btn btn-primary">Add Train</button>
+        </form>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript" src="./assets/js/script.js"></script>
+</body>
+</html>
